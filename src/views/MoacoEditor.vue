@@ -3,15 +3,20 @@
   <div>schema</div>
 </template>
 <script lang="ts">
-import { defineComponent, ref, reactive } from 'vue'
+import { defineComponent, toRefs, reactive } from 'vue'
 
 export default defineComponent({
   setup() {
     const state = reactive({
       name: 'lijin',
+      other
     })
-
-    return {}
-  },
+    function other() {
+      return 1
+    }
+    return {
+      ...toRefs(state)
+    }
+  }
 })
 </script>

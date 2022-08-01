@@ -11,9 +11,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/monacoEditor',
     name: 'MonacoEditor',
     component: () =>
-      import(
-        /* webpackChunkName: "MonacoEditor" */ '../views/MonacoEditor.vue'
-      ),
+      import(/* webpackChunkName: "MonacoEditor" */ '@/views/MoacoEditor.vue'),
   },
   {
     path: '/about',
